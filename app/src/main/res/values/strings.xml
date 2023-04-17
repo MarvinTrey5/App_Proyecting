@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">APP Proyect Ing</string>
+    <string name="tab_text_1"> Vendidos </string>
+    <string name="tab_text_2"> Calificados </string>
+    <string name="tab_text_3"> Oferta </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_quienes_somos">Quienes_Somos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>
