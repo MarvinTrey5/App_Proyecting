@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:textColor="@color/white"
-        android:text=" Somos 4 estudiantes de la Facultad Ciencia & Tecnología, \n Desarrollando una aplicación móvil que permita a los usuarios \n registrado podrá comercializar y comprar
+        android:text=" Somos 4 estudiantes de la Facultad Ciencia Y Tecnología, \n Desarrollando una aplicación móvil que permita a los usuarios \n registrado podrá comercializar y comprar
 productos y servicios \n (ropa, accesorios, tazas, servicios de estampados, etc....). \n los cuales serán
 presentados en una interfaz que el usuario \n otorgaría la descripción detallada del producto donde
 \n también como comprador tendrás acceso a la información y \n comunicación entre el vendedor con su

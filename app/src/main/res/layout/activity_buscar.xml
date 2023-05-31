@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="#D5E3E0"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR PRODUCTO"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresa el producto"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <EditText
+        android:id="@+id/Prod_Ingre"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:layout_marginTop="70dp"
+        android:padding="5dp"
+        android:hint="Ejem:Teléfono"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/Buscar"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="Buscar"
+        android:textSize="13dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#00695C"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Ver_Produc"
+        android:cacheColorHint="@color/black"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="165dp"/>
+</RelativeLayout>
