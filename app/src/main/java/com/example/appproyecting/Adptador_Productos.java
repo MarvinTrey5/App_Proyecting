@@ -1,6 +1,7 @@
 package com.example.appproyecting;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,7 @@ public class Adptador_Productos extends RecyclerView.Adapter<Adptador_Productos.
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView FotoP;
-        TextView NombreP, Pre_Pro, Canti_Pr, Valo_Prd, Desc_Prd;
+        TextView NombreP, Pre_Pro, Canti_Pr, Valo_Prd, Desc_Prd, Ir_Coment;
         ViewHolder(View Info ){
             super(Info);
             FotoP = Info.findViewById(R.id.Imag_P);
@@ -51,6 +52,14 @@ public class Adptador_Productos extends RecyclerView.Adapter<Adptador_Productos.
             Canti_Pr = Info.findViewById(R.id.Cant_Pro);
             Valo_Prd = Info.findViewById(R.id.Valorac_P);
             Desc_Prd = Info.findViewById(R.id.Descrip_P);
+            Ir_Coment = Info.findViewById(R.id.Repor_Product);
+            Ir_Coment.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent Go_Coment = new Intent(view.getContext(), Enviar_Comentario.class);
+                    view.getContext().startActivity(Go_Coment);
+                }
+            });
         }
         public void binData(final ProductosPlanilla Obtener){
             FotoP.setImageResource(Obtener.getVerFoto());
