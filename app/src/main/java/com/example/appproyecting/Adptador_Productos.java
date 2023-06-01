@@ -6,7 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,6 +46,8 @@ public class Adptador_Productos extends RecyclerView.Adapter<Adptador_Productos.
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView FotoP;
         TextView NombreP, Pre_Pro, Canti_Pr, Valo_Prd, Desc_Prd, Ir_Coment;
+        private RatingBar ratingBar;
+        private TextView textView;
         ViewHolder(View Info ){
             super(Info);
             FotoP = Info.findViewById(R.id.Imag_P);
@@ -52,12 +56,22 @@ public class Adptador_Productos extends RecyclerView.Adapter<Adptador_Productos.
             Canti_Pr = Info.findViewById(R.id.Cant_Pro);
             Valo_Prd = Info.findViewById(R.id.Valorac_P);
             Desc_Prd = Info.findViewById(R.id.Descrip_P);
+            ratingBar = Info.findViewById(R.id.valproduc);
+            textView = Info.findViewById(R.id.cantidad);
             Ir_Coment = Info.findViewById(R.id.Repor_Product);
             Ir_Coment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent Go_Coment = new Intent(view.getContext(), Enviar_Comentario.class);
                     view.getContext().startActivity(Go_Coment);
+                }
+            });
+            ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+                @Override
+                public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                    Toast.makeText(itemView.getContext(), "Usted ha dado la calificación de " + rating, Toast.LENGTH_SHORT).show();
+
+                    textView.setText(String.valueOf(rating));
                 }
             });
         }
