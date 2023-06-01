@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,13 +18,14 @@ public class Buscar extends AppCompatActivity {
     EditText Ingre_Datos;
     List<ProductosPlanilla> Datos;
     Button Escoger;
-
+    TextView Ir_coment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
         Mostrar = findViewById(R.id.Ver_Produc);
         Ingre_Datos = findViewById(R.id.Prod_Ingre);
+        Ir_coment = findViewById(R.id.Repor_Product);
         Escoger = findViewById(R.id.Buscar);
         Escoger.setOnClickListener(new View.OnClickListener() {
             @Override
