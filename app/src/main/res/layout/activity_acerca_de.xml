@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#170049"
+    android:background="#C1C3DA"
     android:layout_height="match_parent"
     tools:context=".Acerca_DE">
     <TextView
-        android:background="#170049"
+        android:background="#2E7D32"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PROYECT ING SST"
@@ -25,12 +25,12 @@
         android:layout_marginTop="220dp"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:textColor="@color/white"
-        android:text=" Somos 4 estudiantes de la Facultad Ciencia Y Tecnología, \n Desarrollando una aplicación móvil que permita a los usuarios \n registrado podrá comercializar y comprar
-productos y servicios \n (ropa, accesorios, tazas, servicios de estampados, etc....). \n los cuales serán
-presentados en una interfaz que el usuario \n otorgaría la descripción detallada del producto donde
-\n también como comprador tendrás acceso a la información y \n comunicación entre el vendedor con su
-forma de pago y además \n podrás contar tu experiencia. \n \n "/>
+        android:textColor="@color/black"
+        android:textSize="19.5dp"
+        android:text=" Somos 4 estudiantes de la Facultad Ciencia Y Tecnología,Desarrollando una aplicación móvil que permita a los usuarios registrado podrá comercializar y comprar
+productos y servicios (ropa, accesorios, tazas, servicios de estampados, etc....).\nLos cuales serán
+presentados en una interfaz que el usuario otorgaría la descripción detallada del producto donde también como comprador tendrás acceso a la información y comunicación entre el vendedor con su
+forma de pago y además podrás contar tu experiencia. \n \n "/>
     <ImageView
         android:src="@drawable/mega"
         android:layout_marginLeft="230dp"
