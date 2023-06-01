@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#DDC4C4"
+    tools:context=".Enviar_Comentario">
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Comentarios del usuario"
+        android:layout_marginTop="90dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/commentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:padding="10dp"
+        android:layout_marginTop="150dp"
+        android:hint="Escribe tu comentario aquí"
+        android:textColorHint="@color/black"
+        android:inputType="textMultiLine" />
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        style="@style/Widget.Material3.Button"
+        android:text="Enviar \n comentario"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:backgroundTint="#0D2B26"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="300dp"/>
+    <TextView
+        android:id="@+id/commentsTextView"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/black"
+        android:hint="Visulizar comentario"
+        android:layout_height="120dp"
+        android:padding="10dp"
+        android:layout_marginTop="360dp"/>
+    <ImageView
+        android:id="@+id/Volver_Visualizar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#9FABED"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="660dp"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+</RelativeLayout>
