@@ -1,14 +1,18 @@
 package com.example.appproyecting;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,14 +22,12 @@ public class Buscar extends AppCompatActivity {
     EditText Ingre_Datos;
     List<ProductosPlanilla> Datos;
     Button Escoger;
-    TextView Ir_coment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
         Mostrar = findViewById(R.id.Ver_Produc);
         Ingre_Datos = findViewById(R.id.Prod_Ingre);
-        Ir_coment = findViewById(R.id.Repor_Product);
         Escoger = findViewById(R.id.Buscar);
         Escoger.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,6 +136,12 @@ public class Buscar extends AppCompatActivity {
                     " Validación: Recibo Electrónico.",
                     "Pantalla:HD (1366 x 768) de 15,6\" (39,6 cm).\n Memoria RAM: 4 GB de RAM DDR4-2400 MHz (1 x 4 GB).\n Almacenamiento: Disco duro SATA de 1 TB y 5400 RPM.\n Sistema Operativo: Windows 11 Home.")
             );
+        } else{
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("No se encontró el producto")
+                    .setMessage("Mensaje de tu AlertDialog")
+                    .setPositiveButton("Aceptar", null)
+                    .show();
         }
         Adptador_Productos nuevo = new Adptador_Productos(Datos, this);
         Mostrar.setHasFixedSize(true);
