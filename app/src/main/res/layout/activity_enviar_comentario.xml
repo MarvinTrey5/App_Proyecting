@@ -5,46 +5,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:background="#DDC4C4"
+    android:background="#E8E3E3"
     tools:context=".Enviar_Comentario">
     <TextView
-        android:layout_width="250dp"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:text="Comentarios del usuario"
-        android:layout_marginTop="90dp"
+        android:text="Reportar Productos"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="60dp"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Ingresa tu usuario"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14dp"/>
 
     <EditText
-        android:id="@+id/commentEditText"
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:id="@+id/User_EditText"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
         android:padding="10dp"
-        android:layout_marginTop="150dp"
-        android:hint="Escribe tu comentario aquí"
+        android:textColor="@color/black"
+        android:layout_marginTop="100dp"
+        android:hint="Ej: Marvin_trey5"
         android:textColorHint="@color/black"
         android:inputType="textMultiLine" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Tu comentario"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="145dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14dp"/>
+    <EditText
+        android:id="@+id/Comment_EditText"
+        android:layout_width="400dp"
+        android:layout_height="140dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:layout_marginTop="190dp"
+        android:textColorHint="@color/black"
+        android:inputType="textMultiLine" />
+
     <Button
         android:id="@+id/sendButton"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
         style="@style/Widget.Material3.Button"
-        android:text="Enviar \n comentario"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="335dp"
+        android:backgroundTint="#448AFF"
+        android:drawableBottom="@android:drawable/ic_menu_send"
         android:textSize="10dp"
-        android:textStyle="bold"
-        android:backgroundTint="#0D2B26"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="300dp"/>
-    <TextView
-        android:id="@+id/commentsTextView"
+        android:textStyle="bold" />
+    <ListView
+        android:id="@+id/Ver_Lista"
         android:layout_width="match_parent"
-        android:textColorHint="@color/black"
         android:hint="Visulizar comentario"
-        android:layout_height="120dp"
+        android:background="#6C304A"
+        android:layout_height="260dp"
         android:padding="10dp"
-        android:layout_marginTop="360dp"/>
+        android:layout_marginTop="390dp"/>
     <ImageView
         android:id="@+id/Volver_Visualizar"
         android:layout_width="50dp"
