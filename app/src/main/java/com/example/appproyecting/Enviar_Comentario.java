@@ -49,7 +49,7 @@ public class Enviar_Comentario extends AppCompatActivity {
         Ir_Base.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Ir_Inicio = new Intent(Enviar_Comentario.this, MainActivity.class);
+                Intent Ir_Inicio = new Intent(Enviar_Comentario.this, Buscar.class);
                 startActivity(Ir_Inicio);
             }
         });
