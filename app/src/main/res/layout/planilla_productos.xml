@@ -4,14 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card"
     android:layout_width="match_parent"
-    android:layout_height="420dp"
+    android:layout_height="520dp"
     android:background="#D5E3E0"
     app:cardCornerRadius="5dp"
     app:cardElevation="10dp"
     android:layout_marginTop="10dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="520dp"
         android:orientation="horizontal"
         android:padding="10dp">
         <ImageView
@@ -22,7 +22,7 @@
             android:src="@drawable/ic_launcher_foreground"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="410dp"
+            android:layout_height="510dp"
             android:background="@color/white"
             android:orientation="vertical">
             <TextView
@@ -70,6 +70,31 @@
                 android:textSize="14dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/Repor_Product"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Reportar Producto"
+                android:layout_marginStart="40dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <RatingBar
+                android:id="@+id/valproduc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:layout_marginTop="0dp"
+                android:rating="0"
+                android:progressBackgroundTint="@color/black"/>
+            <TextView
+                android:id="@+id/cantidad"
+                android:layout_width="60dp"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:hint="0.0" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
