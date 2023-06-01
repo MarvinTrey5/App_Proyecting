@@ -14,12 +14,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.appproyecting.ui.main.SectionsPagerAdapter;
 import com.example.appproyecting.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     Button Go;
+    TextView Valorar;
     private ActivityMainBinding binding;
 
     @Override
