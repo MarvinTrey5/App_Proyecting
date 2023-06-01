@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#010851"
+    android:background="#C1C3DA"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
-            android:background="#010851"
+            android:background="#2E7D32"
             android:layout_width="410dp"
             android:layout_height="60dp" />
     <androidx.viewpager.widget.ViewPager
@@ -17,13 +17,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
+    <TextView
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="Buscar Producto"
+        android:textColor="@color/black"
+        android:textStyle="normal|bold"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="290dp"/>
     <Button
         android:id="@+id/Buscar"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:backgroundTint="#69F0AE"
         android:layout_marginStart="350dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:drawableRight="?android:attr/actionModeWebSearchDrawable" />
 </RelativeLayout>
