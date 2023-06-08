@@ -18,12 +18,17 @@ import java.util.List;
 public class Adptador_Productos extends RecyclerView.Adapter<Adptador_Productos.ViewHolder> {
     List<ProductosPlanilla> Product;
     LayoutInflater MiInflate;
+    private String ratingText;
     Context Datos;
 
     public Adptador_Productos(List<ProductosPlanilla> product, Context datos) {
         Product = product;
         MiInflate = LayoutInflater.from(datos);
         Datos = datos;
+    }
+
+    public Adptador_Productos() {
+
     }
 
     @NonNull
@@ -70,8 +75,13 @@ public class Adptador_Productos extends RecyclerView.Adapter<Adptador_Productos.
                 @Override
                 public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                     Toast.makeText(itemView.getContext(), "Usted ha dado la calificación de " + rating, Toast.LENGTH_SHORT).show();
-
                     textView.setText(String.valueOf(rating));
+                    // Crear el Intent
+                    Intent intent = new Intent(itemView.getContext(), Recibir_Coments.class);
+                    // Agregar el contenido del TextView como un extra
+                    intent.putExtra("ratingText", String.valueOf(rating));
+                    // Iniciar la nueva actividad
+                    itemView.getContext().startActivity(intent);
                 }
             });
         }
