@@ -79,7 +79,7 @@ public class Adptador_Productos extends RecyclerView.Adapter<Adptador_Productos.
                     // Crear el Intent
                     Intent intent = new Intent(itemView.getContext(), Recibir_Coments.class);
                     // Agregar el contenido del TextView como un extra
-                    intent.putExtra("ratingText", String.valueOf(rating));
+                    intent.putExtra("rating", rating);
                     // Iniciar la nueva actividad
                     itemView.getContext().startActivity(intent);
                 }
