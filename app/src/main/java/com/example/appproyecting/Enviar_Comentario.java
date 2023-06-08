@@ -60,6 +60,9 @@ public class Enviar_Comentario extends AppCompatActivity {
                 Com_User = ComentUser.getText().toString();
                 Ver_Nom_coment = ID_user + " : \n " + Com_User;
                 agregar(Ver_Nom_coment);
+                Intent Mandar_Coments = new Intent(Enviar_Comentario.this, Recibir_Coments.class);
+                Mandar_Coments.putExtra("Ver_Coment", Ver_Nom_coment);
+                startActivity(Mandar_Coments);
             }
         });
     }
