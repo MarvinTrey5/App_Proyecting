@@ -12,38 +12,39 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Recibir_Coments extends AppCompatActivity {
     ListView Ver_DatosComents, Ver_Valoracion;
-    ArrayList<String> Obtner_Datos, ElementS_Val;
+    Button Volver;
+    ArrayList<String> Obtner_Datos, ratingList;
     ArrayAdapter<String> Adap_tador1, Adap_tador2;
-    Button Volver_P;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recibir_coments);
         Ver_DatosComents = findViewById(R.id.Observar_Coments);
         Ver_Valoracion = findViewById(R.id.Observar_Validacion);
-        Volver_P = findViewById(R.id.Vol_ver);
+        Volver =findViewById(R.id.Vol_ver);
         Obtner_Datos = new ArrayList<>();
-        ElementS_Val = new ArrayList<>();
+        ratingList = new ArrayList<>();
         Adap_tador1 = new ArrayAdapter<String>(Recibir_Coments.this, android.R.layout.simple_list_item_1,Obtner_Datos);
         Ver_DatosComents.setAdapter(Adap_tador1);
-        Adap_tador2 = new ArrayAdapter<>(Recibir_Coments.this, android.R.layout.simple_list_item_1, ElementS_Val);
+        Adap_tador2 = new ArrayAdapter<>(Recibir_Coments.this, android.R.layout.simple_list_item_1, ratingList);
         Ver_Valoracion.setAdapter(Adap_tador2);
         Intent Ver_Datos = getIntent();
-        String Ver_Coments_US = Ver_Datos.getStringExtra("dato");
+        String Ver_Coments_US = Ver_Datos.getStringExtra("Ver_Coment");
         Add(Ver_Coments_US);
-
-        float rating = getIntent().getFloatExtra("rating", 0.0f);
-        String Elemtos ="rating" + rating;
-        ElementS_Val.add(Elemtos);
-        Volver_P.setOnClickListener(new View.OnClickListener() {
+        String ratingText = getIntent().getStringExtra("ratingText");
+        if (ratingText != null) {
+            ratingList.add(ratingText);
+           Adap_tador2.notifyDataSetChanged();
+        }
+        Volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent IR_Principal = new Intent(Recibir_Coments.this, Buscar.class);
-                startActivity(IR_Principal);
-                Recibir_Coments.this.finish();
+                Intent Nueva_Busqueda =new Intent(Recibir_Coments.this, Buscar.class);
+                startActivity(Nueva_Busqueda);
             }
         });
     }
