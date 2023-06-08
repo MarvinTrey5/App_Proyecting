@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.APPProyectIng"
         tools:targetApi="31">
+        <activity
+            android:name=".Recibir_Coments"
+            android:exported="true" />
 
         <meta-data
             android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
